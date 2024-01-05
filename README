@@ -6,7 +6,35 @@ ________                __   .__
         \/     \/           \/                  
 
 
-        Space Flight Calculator v0.3.1
+               Space Flight Calculator v0.3.1
+                         By: Darklor
 
 
-        
+This tool is a calculator for space travel, designed with the game
+Dual Universe in mind, but it will work for any game that uses "real"
+physics models for the basic space flight mechanic. 
+
+It is Javascript and HTML and can run just as easily on your machine 
+as it does on the production site. Releases are available on our
+GitHub repo.
+
+
+INSTRUCTIONS FOR INSTALLATION: 
+
+Unzip the release archive to your system. 
+Open "index.html" with a web browser.
+
+
+INSTRUCTIONS FOR USE:
+
+TODO -- write this section
+
+
+CREDITS:
+
+TODO -- add credits
+
+
+LICENSE:
+
+Refer to file "LICENSE" in root directory of release for terms of use of this software.
