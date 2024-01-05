@@ -113,7 +113,7 @@
 
       // Calculate burn times 
       const accelBurnTimeSeconds = (velocityFinalMetersPerSecond - velocityInitialMetersPerSecond) / (thrustForwardG * 9.8);
-      const decelBurnTimeSeconds = (velocityFinalMetersPerSecond - velocityInitialMetersPerSecond) / (Math.abs(thrustBrakingG) * 9.8);
+      const decelBurnTimeSeconds = velocityFinalMetersPerSecond / (Math.abs(thrustBrakingG) * 9.8);
 
       // Calculate cruise distance
       const cruiseDistanceMeters = Math.abs(targetRangeMeters - (accelerationDistanceMeters + Math.abs(decelerationDistanceMeters)));
