@@ -35,10 +35,9 @@
   </style>
 </head>
 <body>
-  <h2>Spaceship Burn Calculator</h2>
-  <p>Assumes sub 0.1g local gravity at all times</p>
-  <p>Does not account for changes in burn rate or velocity or available thrust due to course corrections mid-flight</p>
-  <p>Does not account for engine warm-up time</p>
+  <h2>Space Travel Calculator</h2>
+  <h3>v0.3.1</h3>
+  <h4>By: Darklor</h4>
 
   <label for="targetRange">Range to Target (SU) (optional):</label>
   <input type="number" id="targetRange" placeholder="Enter range to target">
@@ -67,6 +66,10 @@
   <div id="resultDecelDistance"></div>
   <div id="resultFuelBurn"></div>
   <div id="resultBurnTime"></div>
+
+  <p>Assumes sub 0.1g local gravity at all times</p>
+  <p>Does not account for changes in burn rate or velocity or available thrust due to course corrections mid-flight</p>
+  <p>Does not account for engine warm-up time</p>
 
   <script>
     function calculateTrip() {
