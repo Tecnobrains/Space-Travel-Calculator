@@ -36,7 +36,7 @@
 </head>
 <body>
   <h2>Space Travel Calculator</h2>
-  <h3>v0.3.2</h3>
+  <h3>v0.3.3</h3>
   <h4>By: Darklor</h4>
 
   <label for="targetRange">Range to Target (SU) (optional):</label>
@@ -96,8 +96,8 @@
       const targetRangeMeters = (targetRangeSU * 200) * 1000;
 	  
       // Calculate deceleration distance using the formula: distance = (velocity^2) / (2 * acceleration)
-      const accelerationDistanceMeters = (velocityFinalMetersPerSecond ** 2) / (2 * thrustForwardG * 9.8);
-	    const decelerationDistanceMeters = (velocityFinalMetersPerSecond ** 2) / (2 * thrustBrakingG * 9.8);
+      const accelerationDistanceMeters = ((velocityFinalMetersPerSecond - velocityInitialMetersPerSecond) ** 2) / (2 * thrustForwardG * 9.8); // this is shit and i know it
+	    const decelerationDistanceMeters = (velocityFinalMetersPerSecond ** 2) / (2 * thrustBrakingG * 9.8); // so is this...
 
       // Convert deceleration distance to kilometers
       const accelerationDistanceKM = accelerationDistanceMeters / 1000;
