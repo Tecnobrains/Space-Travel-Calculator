@@ -132,7 +132,7 @@
       const travelTimeSeconds = Math.abs(cruiseTimeSeconds) + Math.abs(accelBurnTimeSeconds) + Math.abs(decelBurnTimeSeconds);
 
       // convert to HH:MM:SS or MM:SS as needed
-	    const accelBurnTimeLong = new Date(SECONDS * 1000).toISOString().substring(14, 19);
+	    const accelBurnTimeLong = new Date(accelBurnTimeSeconds * 1000).toISOString().substring(14, 19);
 
       // Display the result
       const resultElementAccel = document.getElementById('resultAccelDistance');
