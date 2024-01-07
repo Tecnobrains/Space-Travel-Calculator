@@ -133,6 +133,9 @@
 
       // convert to HH:MM:SS or MM:SS as needed
 	    const accelBurnTimeLong = new Date(accelBurnTimeSeconds * 1000).toISOString().substring(14, 19);
+      const decelBurnTimeLong = new Date(decelBurnTimeSeconds * 1000).toISOString().substring(14, 19);
+      const cruiseTimeLong = new Date(cruiseTimeSeconds * 1000).toISOString().substring(14, 19);
+      const travelTimeLong = new Date(travelTimeSeconds * 1000).toISOString().substring(14, 19);
 
       // Display the result
       const resultElementAccel = document.getElementById('resultAccelDistance');
@@ -148,7 +151,7 @@
 
       // Display the result
       const resultElementTime = document.getElementById('resultBurnTime');
-      resultElementTime.textContent = `Length of trip: ${travelTimeSeconds.toFixed(0)}s Length of accel burn: ${accelBurnTimeLong} Length of cruise : ${cruiseTimeSeconds.toFixed(0)}s Length of decel burn: ${decelBurnTimeSeconds.toFixed(0)}s`;
+      resultElementTime.textContent = `Length of trip: ${travelTimeLong} Length of accel burn: ${accelBurnTimeLong} Length of cruise : ${cruiseTimeLong}s Length of decel burn: ${decelBurnTimeLong}`;
       
     } // TODO -- stuff and more stuff and even more stuff
   </script>
