@@ -131,7 +131,7 @@
       // Calculate Travel Time
       const travelTimeSeconds = Math.abs(cruiseTimeSeconds) + Math.abs(accelBurnTimeSeconds) + Math.abs(decelBurnTimeSeconds);
 
-      // convert to HH:MM:SS or MM:SS as needed   (use (11, 16) for hh:mm  ||  (14, 19) for mm:ss )
+      // convert to HH:MM:SS    somehow works, idfk i got it off stackexchange
 	    const accelBurnTimeLong = new Date(accelBurnTimeSeconds * 1000).toISOString().substring(11, 19);
       const decelBurnTimeLong = new Date(decelBurnTimeSeconds * 1000).toISOString().substring(11, 19);
       const cruiseTimeLong = new Date(cruiseTimeSeconds * 1000).toISOString().substring(11, 19);
@@ -151,7 +151,7 @@
 
       // Display the result
       const resultElementTime = document.getElementById('resultBurnTime');
-      resultElementTime.textContent = `Length of trip: ${travelTimeLong} Length of accel burn: ${accelBurnTimeLong} Length of cruise : ${cruiseTimeLong}s Length of decel burn: ${decelBurnTimeLong}`;
+      resultElementTime.textContent = `Length of trip: ${travelTimeLong} Length of accel burn: ${accelBurnTimeLong} Length of cruise : ${cruiseTimeLong} Length of decel burn: ${decelBurnTimeLong}`;
       
     } // TODO -- stuff and more stuff and even more stuff
   </script>
