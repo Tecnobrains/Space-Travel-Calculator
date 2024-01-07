@@ -36,7 +36,7 @@
 </head>
 <body>
   <h2>Space Travel Calculator</h2>
-  <h3>v0.3.3</h3>
+  <h3>v0.4.0</h3>
   <h4>By: Darklor</h4>
 
   <label for="targetRange">Range to Target (SU) (optional):</label>
@@ -84,6 +84,8 @@
         alert('Please enter valid numerical values for all required entries');
         return;
       }
+      
+      
 
       // Convert velocity from km/h to m/s
       const velocityInitialMetersPerSecond = velocityInitialKilometersPerHour * (1000 / 3600);
@@ -128,7 +130,13 @@
 
       // Calculate Travel Time
       const travelTimeSeconds = Math.abs(cruiseTimeSeconds) + Math.abs(accelBurnTimeSeconds) + Math.abs(decelBurnTimeSeconds);
-	  
+
+      // convert to HH:MM:SS    somehow works, idfk i got it off stackexchange
+	    const accelBurnTimeLong = new Date(accelBurnTimeSeconds * 1000).toISOString().substring(11, 19);
+      const decelBurnTimeLong = new Date(decelBurnTimeSeconds * 1000).toISOString().substring(11, 19);
+      const cruiseTimeLong = new Date(cruiseTimeSeconds * 1000).toISOString().substring(11, 19);
+      const travelTimeLong = new Date(travelTimeSeconds * 1000).toISOString().substring(11, 19);
+
       // Display the result
       const resultElementAccel = document.getElementById('resultAccelDistance');
       resultElementAccel.textContent = `Acceleration Distance: ${accelerationDistanceKM.toFixed(2)} km or ${accelerationDistanceSU.toFixed(2)} SU  BURN LENGTH (seconds): ${accelBurnTimeSeconds.toFixed(2)}`;
@@ -143,7 +151,7 @@
 
       // Display the result
       const resultElementTime = document.getElementById('resultBurnTime');
-      resultElementTime.textContent = `Length of trip: ${travelTimeSeconds.toFixed(0)}s Length of accel burn: ${accelBurnTimeSeconds.toFixed(0)}s Length of cruise : ${cruiseTimeSeconds.toFixed(0)}s Length of decel burn: ${decelBurnTimeSeconds.toFixed(0)}s`;
+      resultElementTime.textContent = `Length of trip: ${travelTimeLong} Length of accel burn: ${accelBurnTimeLong} Length of cruise : ${cruiseTimeLong} Length of decel burn: ${decelBurnTimeLong}`;
       
     } // TODO -- stuff and more stuff and even more stuff
   </script>
