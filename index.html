@@ -131,11 +131,11 @@
       // Calculate Travel Time
       const travelTimeSeconds = Math.abs(cruiseTimeSeconds) + Math.abs(accelBurnTimeSeconds) + Math.abs(decelBurnTimeSeconds);
 
-      // convert to HH:MM:SS or MM:SS as needed
-	    const accelBurnTimeLong = new Date(accelBurnTimeSeconds * 1000).toISOString().substring(14, 19);
-      const decelBurnTimeLong = new Date(decelBurnTimeSeconds * 1000).toISOString().substring(14, 19);
-      const cruiseTimeLong = new Date(cruiseTimeSeconds * 1000).toISOString().substring(14, 19);
-      const travelTimeLong = new Date(travelTimeSeconds * 1000).toISOString().substring(14, 19);
+      // convert to HH:MM:SS or MM:SS as needed   (use (11, 16) for hh:mm:ss  ||  (14, 19) for mm:ss )
+	    const accelBurnTimeLong = new Date(accelBurnTimeSeconds * 1000).toISOString().substring(11, 16);
+      const decelBurnTimeLong = new Date(decelBurnTimeSeconds * 1000).toISOString().substring(11, 16);
+      const cruiseTimeLong = new Date(cruiseTimeSeconds * 1000).toISOString().substring(11, 16);
+      const travelTimeLong = new Date(travelTimeSeconds * 1000).toISOString().substring(11, 16);
 
       // Display the result
       const resultElementAccel = document.getElementById('resultAccelDistance');
